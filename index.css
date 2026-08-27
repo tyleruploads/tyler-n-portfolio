@@ -1,0 +1,21 @@
+h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+p {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+#button-contact {
+    font-size: 3rem;
+}
+
+#page-content {
+    align-items: center;
+}
+
+img {
+    width: 360px;
+    height: 360px;
+    margin-bottom: 20px;
+}

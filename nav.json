@@ -1,0 +1,16 @@
+{
+    "tools": [
+        {
+            "name": "Home", "url": "/index.html"
+        },
+        {
+            "name": "About", "url": "/about.html"
+        },
+        {
+            "name": "Projects", "url": "/projects.html"
+        },
+        {
+            "name": "Contact",  "url": "/contact.html"
+        }
+    ]
+}

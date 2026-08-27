@@ -1,0 +1,141 @@
+:root {
+    --bg-color: #0b0f19;       /* Deep dark navy/charcoal */
+    --card-bg: #161b26;        /* Slightly lighter dark for boxes */
+    --border-color: #262f40;   /* Clean border lines */
+    --text-main: #f3f4f6;      /* Bright off-white */
+    --text-muted: #9ca3af;     /* Gray for secondary text */
+    --accent: #38bdf8;         /* Neon sky blue for links/buttons */
+    --accent-hover: #7dd3fc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#site-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 95% !important;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+#page-content {
+    display: flex !important;
+    flex-direction: column;
+  
+    text-align: center;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+
+    background-color: var(--bg-color);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 1.5rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+main {
+    flex: 1;
+    padding: 3rem 0;
+}
+
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+input, select, textarea, button {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--accent);
+}
+
+button {
+    background-color: var(--accent);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+code, pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    background-color: var(--card-bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #f472b6;
+}
+
+.center {
+    text-align: center;
+}
