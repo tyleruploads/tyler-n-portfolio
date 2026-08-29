@@ -1,0 +1,29 @@
+#div-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.project-card {
+    text-align: left;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.project-tech-stack {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.project-tech-stack span {
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
