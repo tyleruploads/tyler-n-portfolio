@@ -1,10 +1,10 @@
 :root {
-    --bg-color: #0b0f19;       /* Deep dark navy/charcoal */
-    --card-bg: #161b26;        /* Slightly lighter dark for boxes */
-    --border-color: #262f40;   /* Clean border lines */
-    --text-main: #f3f4f6;      /* Bright off-white */
-    --text-muted: #9ca3af;     /* Gray for secondary text */
-    --accent: #38bdf8;         /* Neon sky blue for links/buttons */
+    --bg-color: #0b0f19; /* Deep dark navy/charcoal */
+    --card-bg: #161b26; /* Slightly lighter dark for boxes */
+    --border-color: #262f40; /* Clean border lines */
+    --text-main: #f3f4f6; /* Bright off-white */
+    --text-muted: #9ca3af; /* Gray for secondary text */
+    --accent: #38bdf8; /* Neon sky blue for links/buttons */
     --accent-hover: #7dd3fc;
 }
 
@@ -17,7 +17,14 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-main);
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family:
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
     line-height: 1.5;
     display: flex;
     flex-direction: column;
@@ -37,7 +44,7 @@ body {
 #page-content {
     display: flex !important;
     flex-direction: column;
-  
+
     text-align: center;
 }
 
@@ -86,8 +93,9 @@ footer {
     text-align: center;
 }
 
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-align: center;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -99,7 +107,10 @@ p {
     margin-bottom: 1.5rem;
 }
 
-input, select, textarea, button {
+input,
+select,
+textarea,
+button {
     background-color: var(--card-bg);
     color: var(--text-main);
     border: 1px solid var(--border-color);
@@ -111,7 +122,9 @@ input, select, textarea, button {
     transition: border-color 0.2s;
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
     border-color: var(--accent);
 }
 
@@ -127,8 +140,10 @@ button:hover {
     background-color: var(--accent-hover);
 }
 
-code, pre {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+code,
+pre {
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     background-color: var(--card-bg);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
