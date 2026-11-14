@@ -4,8 +4,7 @@
 
 dl {
   display: grid;
-  justify-self: center;
-  width: 80%;
+  width: 100%;
   margin-inline: auto;
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -38,6 +37,23 @@ dl dd {
   border-left: 3px solid var(--accent);
   font-size: 1rem;
   color: var(--text-main);
+}
+
+@media (max-width: 600px) {
+  dl {
+    grid-template-columns: 1fr;
+    gap: 8px 0;
+    width: 95%;
+    padding: 16px;
+  }
+
+  dl dd {
+    margin-bottom: 12px;
+    border-left: none;
+    border-top: 3px solid var(--accent);
+    padding-left: 0;
+    padding-top: 4px;
+  }
 }
 
 #div-background,
