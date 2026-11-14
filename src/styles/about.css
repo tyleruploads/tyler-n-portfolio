@@ -71,6 +71,7 @@ dl dd {
 }
 
 #button-contact {
+  margin-top: 20px;
   font-size: 3rem;
   line-height: 1.1;
   font-weight: 700;
