@@ -112,7 +112,7 @@ function loadProjects() {
         (project) => `
             <div class="project-card">
                 <h3>
-                    <a href="${project.url}">${project.name}</a>
+                    <a href="${project.url}" target="_blank" rel="noopener noreferrer">${project.name}</a>
                 </h3>
                 <p>${project.description}</p>
                 <div class="project-tech-stack">
