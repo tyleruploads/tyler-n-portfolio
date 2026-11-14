@@ -2,6 +2,44 @@
   text-align: center;
 }
 
+dl {
+  display: grid;
+  justify-self: center;
+  width: 80%;
+  margin-inline: auto;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  grid-template-columns: max-content 1fr;
+  gap: 12px 24px;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  max-width: 550px;
+}
+
+dl dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+}
+
+dl dt:first-child {
+  margin-top: 0;
+}
+
+dl dd {
+  margin: 4px 0 0 0;
+  padding-left: 12px;
+  border-left: 3px solid var(--accent);
+  font-size: 1rem;
+  color: var(--text-main);
+}
+
 #div-background,
 #div-hobbies {
   text-align: left;
