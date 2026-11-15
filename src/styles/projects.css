@@ -19,6 +19,19 @@
   box-sizing: border-box;
 }
 
+.project-card h3 {
+  margin-bottom: 4px;
+}
+
+.project-updated-date {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .project-tech-stack {
   display: flex;
   flex-wrap: wrap;

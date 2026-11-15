@@ -71,13 +71,40 @@ const PROJECTS_ARR = [
   },
 ];
 
-function loadProjects() {
+async function loadProjects() {
+  try {
+    const response = await fetch(
+      "https://api.github.com/users/tyleruploads/repos?sort=pushed&direction=desc&per_page=100",
+    );
+
+    if (!response.ok) throw new Error("GitHub API Request failed");
+
+    const repositories = await response.json();
+
+    PROJECTS_ARR.forEach((project) => {
+      const repository = repositories.find(
+        (repo) => repo.html_url === project.url,
+      );
+
+      if (repository) {
+        project.lastPushed = repository.pushed_at;
+      }
+    });
+
+    PROJECTS_ARR.sort((a, b) =>
+      (b.lastPushed || "").localeCompare(a.lastPushed || ""),
+    );
+  } catch (error) {
+    console.warn("Could not retrieve GitHub push dates: ", error);
+  }
+
   projectsDiv.innerHTML = PROJECTS_ARR.map(
     (project) => `
             <div class="project-card">
                 <h3>
                     <a href="${project.url}" target="_blank" rel="noopener noreferrer">${project.name}</a>
                 </h3>
+                ${project.lastPushed ? `<p class="project-updated-date">Last Updated: <time datetime="${project.lastPushed}" title="${new Date(project.lastPushed).toLocaleString()}">${new Date(project.lastPushed).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" })}</time></p>` : ""}
                 <p>${project.description}</p>
                 <div class="project-tech-stack">
                     ${project.techStack.map((tech) => `<span>${tech}</span>`).join("")}
