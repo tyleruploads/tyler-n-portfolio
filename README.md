@@ -13,6 +13,7 @@ A personal portfolio website to showcase my life and skills.
 - Great on desktop, while core functionalities remain when viewing on mobile devices
 - An awesome biography section
 - Showcase of my projects
+- Shows all my articles
 - Contact email and form, and professional network links
 
 ## Live Demos
