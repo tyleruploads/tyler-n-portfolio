@@ -1,16 +1,6 @@
 // SHOULD BE IMPORTED AS A DEFER SCRIPT
 
-// ID OF MAIN PAGE CONTENT SHOULD BE 'page-content', AND SET TO DISPLAY: NONE
-
-/*
-TODO: if the site should not flash white (blank) while loading:
- * 1. add <link rel="stylesheet" href="shared/css/base.css"> to the head of
- *    index.html, about.html, contact.html, and projects.html.
- * 2. remove the dynamically-created base.css link below.
- * 3. remove the styleLink.onload/styleLink.onerror reveal logic below.
- * 4. remove style="display: none" from page-content in the pages that use it.
- * after reading/fixing, delete this comment block!
-*/
+// ID OF MAIN PAGE CONTENT SHOULD BE 'page-content'
 
 document.addEventListener("DOMContentLoaded", () => {
   const rawContent = document.getElementById("page-content");
@@ -18,11 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("FATAL ERROR: tag with ID page-content not found");
     return;
   }
-
-  const styleLink = document.createElement("link");
-  styleLink.rel = "stylesheet";
-  styleLink.href = "shared/base.css";
-  document.head.appendChild(styleLink);
 
   const goatScript = document.createElement("script");
   goatScript.src = "//gc.zgo.at/count.js";
@@ -45,16 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   container.appendChild(header);
   container.appendChild(rawContent);
-  container.appendChild(footer);
-
-  styleLink.onload = () => {
-    rawContent.style.display = "";
-  };
-
-  styleLink.onerror = () => {
-    console.error("CSS failed to load, revealing unstyled content");
-    rawContent.style.display = "";
-  };
+  container.appendChild(footer); 
 
   document.body.appendChild(container);
 });
