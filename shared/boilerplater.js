@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const footer = document.createElement("footer");
   footer.innerHTML = `
     <a href="license.html" rel="license">© Tyler N. MIT License</a>
+    <a href="https://github.com/tyleruploads/tyler-n-portfolio/" target="_blank" rel="noopener">Open Source on GitHub</a>
   `;
 
   container.appendChild(header);
