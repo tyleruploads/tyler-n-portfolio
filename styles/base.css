@@ -29,6 +29,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  /* This reserves space at top for navbar, to prevent jumping on page changes */
+  padding-top: 60px;
+  marin: 0;
 }
 
 #site-layout {
@@ -49,8 +53,8 @@ body {
 }
 
 nav {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 16px;
   left: 0;
   width: 100%;
   min-height: 60px;
