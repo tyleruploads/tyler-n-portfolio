@@ -26,11 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
   buildNavBar(header);
 
   const footer = document.createElement("footer");
-  footer.innerHTML = "© Tyler N. MIT License";
+  footer.innerHTML = `
+    <a href="license.html" rel="license">© Tyler N. MIT License</a>
+  `;
 
   container.appendChild(header);
   container.appendChild(rawContent);
-  container.appendChild(footer); 
+  container.appendChild(footer);
 
   document.body.appendChild(container);
 });
