@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const styleLink = document.createElement("link");
   styleLink.rel = "stylesheet";
-  styleLink.href = "shared/css/base.css";
+  styleLink.href = "shared/base.css";
   document.head.appendChild(styleLink);
 
   const goatScript = document.createElement("script");
