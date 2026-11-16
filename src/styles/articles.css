@@ -1,0 +1,141 @@
+#article-count {
+  font-size: 2em;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#article-count strong {
+  font-weight: 700;
+  font-size: 2.25rem;
+}
+
+#div-articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.article-card {
+  position: relative;
+  text-align: left;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-cover,
+.article-cover-fallback {
+  width: 100%;
+  aspect-ratio: 1000 / 420;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.article-cover-fallback {
+  background: linear-gradient(90deg, #2563eb, #dc2626);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  container-type: inline-size;
+}
+
+.fallback-box {
+  background-color: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 12px 18px;
+  height: auto;
+  min-height: 45%;
+  max-height: 88%;
+  max-width: 88%;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: clamp(0.85rem, 4.2cqi, 2rem);
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+.article-card h3 a {
+  max-width: clamp(35ch, 50vw, 65ch);
+  display: inline-block;
+  overflow-wrap: break-word;
+  word-break: normal;
+  line-break: strict;
+  hyphens: auto;
+}
+
+.article-card h3 a:link,
+.article-card h3 a:visited {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.article-card h3 a:hover {
+  text-decoration: underline;
+}
+
+/* This makes the whole card clickable to go to article */
+.article-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* This makes the whole card outlined when navigating with tab */
+.article-card:has(h3 a:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.85rem;
+  margin: 8px 0 12px;
+}
+
+.article-meta > * {
+  border-left: 1px solid white;
+  padding: 0 10px 0 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.tags span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
